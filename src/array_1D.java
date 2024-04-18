@@ -2,18 +2,18 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 public class array_1D {
-    private int[] a;
-    private int count;
+    protected int[] a;
+    protected int count;
 
     public int[] getA() {
         return a;
     }
 
-    public array_1D(){
+    public array_1D(int n){
 
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-        count = scanner.nextInt();
+
+        count = n;
         a = new int[count];
         for (int i = 0; i < count; i++){
             a[i] = random.nextInt(1,11);
@@ -29,7 +29,6 @@ public class array_1D {
 
         return kk;
     }
-
 
     @Override
     public String toString() {

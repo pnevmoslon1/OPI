@@ -4,21 +4,21 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class array_2D extends array_1D {
-    private int[][] a;
-    private int n, m;
+    protected int[][] b;
+    protected int n, m;
 
     public array_2D() {
 
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
-        n = scanner.nextInt();
+        n = super.count;
         m = scanner.nextInt();
 
-        a = new int[n][m];
+        b = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                a[i][j] = random.nextInt(1, 11);
+                b[i][j] = random.nextInt(1, 11);
             }
         }
     }
@@ -32,8 +32,8 @@ public class array_2D extends array_1D {
         int sumSeckond = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                if (i < n / 2) sumFirst += a[i][j];
-                else sumSeckond += a[i][j];
+                if (i < n / 2) sumFirst += b[i][j];
+                else sumSeckond += b[i][j];
             }
         }
 
@@ -41,16 +41,23 @@ public class array_2D extends array_1D {
         if (sumFirst > sumSeckond) startPos = 0;
         else startPos = n / 2;
 
-        for (int i = startPos; i < n / 2 + startPos; i++){
-            Arrays.sort(a[i]);
+        int c;
 
+        for (int i = startPos; i < n / 2 + startPos; i++){
+            Arrays.sort(b[i]);
+
+            for (int j = 0; j < m/2;j++){
+                c = b[i][j];
+                b[i][j] = b[i][m - j - 1];
+                b[i][m - j - 1] = c;
+            }
         }
     }
 
     public void arrayPrint(){
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                System.out.print(a[i][j] + " ");
+                System.out.print(b[i][j] + " ");
             }
             System.out.println();
         }
