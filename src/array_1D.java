@@ -9,11 +9,11 @@ public class array_1D {
         return a;
     }
 
-    public array_1D(int n){
+    public array_1D(){
 
         Random random = new Random();
-
-        count = n;
+        Scanner scanner = new Scanner(System.in);
+        count = scanner.nextInt();
         a = new int[count];
         for (int i = 0; i < count; i++){
             a[i] = random.nextInt(1,11);
@@ -29,6 +29,7 @@ public class array_1D {
 
         return kk;
     }
+
 
     @Override
     public String toString() {
