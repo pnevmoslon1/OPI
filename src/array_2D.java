@@ -7,14 +7,12 @@ public class array_2D extends array_1D {
     protected int[][] b;
     protected int n, m;
 
-    public array_2D() {
+    public array_2D() {}
 
+    public array_2D(int row, int col) {
+        n = row;
+        m = col;
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-
-        n = super.count;
-        m = scanner.nextInt();
-
         b = new int[n][m];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {

@@ -1,9 +1,8 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        array_2D a = new array_2D(n);
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        array_2D a = new array_2D(3, 4);
+        array_array c = new array_array(4);
 
         a.arrayPrint();
         a.func();
