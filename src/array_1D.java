@@ -13,7 +13,6 @@ public class array_1D {
 
     public array_1D(int col){
         count = col;
-        System.out.println("я пидорас!");
         Random random = new Random();
         a = new int[count];
         for (int i = 0; i < count; i++){

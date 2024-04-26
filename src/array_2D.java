@@ -4,19 +4,34 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class array_2D extends array_1D {
-    protected int[][] b;
-    protected int n, m;
+    private array_1D[] array2D;
 
+    private int height,weight;
     public array_2D() {}
 
-    public array_2D(int row, int col) {
-        n = row;
-        m = col;
+    public array_2D(int h, int w) {
+        height = h;
+        weight = w;
+        array2D = new array_1D[height];
         Random random = new Random();
-        b = new int[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                b[i][j] = random.nextInt(1, 11);
+        for (int i = 0; i < array2D.length; i++) {
+                 array2D[i] = new array_1D(weight);
+            for (int j = 0; j < weight; j++) {
+
+                array2D[i].getA()[j] = random.nextInt(1, 15);
+            }
+        }
+    }
+    public array_2D(int h) {
+        height = h;
+
+        array2D = new array_1D[height];
+        Random random = new Random();
+        for (int i = 0; i < array2D.length; i++) {
+            array2D[i] = new array_1D(random.nextInt(1, 15));
+            for (int j = 0; j < array2D[i].getLen(); j++) {
+
+                array2D[i].getA()[j] = random.nextInt(1, 15);
             }
         }
     }
@@ -28,34 +43,49 @@ public class array_2D extends array_1D {
     public void func() {
         int sumFirst = 0;
         int sumSeckond = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (i < n / 2) sumFirst += b[i][j];
-                else sumSeckond += b[i][j];
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < array2D[i].getLen(); j++) {
+                if (i < height / 2) sumFirst += array2D[i].getA()[j];
+                else sumSeckond += array2D[i].getA()[j];
             }
         }
 
         int startPos;
         if (sumFirst > sumSeckond) startPos = 0;
-        else startPos = n / 2;
+        else startPos = height / 2;
 
         int c;
 
-        for (int i = startPos; i < n / 2 + startPos; i++){
-            Arrays.sort(b[i]);
+        for (int i = startPos; i < height / 2 + startPos; i++){
+            Arrays.sort(array2D[i].getA());
 
-            for (int j = 0; j < m/2;j++){
-                c = b[i][j];
-                b[i][j] = b[i][m - j - 1];
-                b[i][m - j - 1] = c;
+            for (int j = 0; j < array2D[i].getLen()/2;j++){
+                c = array2D[i].getA()[j];
+                array2D[i].getA()[j] = array2D[i].getA()[array2D[i].getLen() - j - 1];
+                array2D[i].getA()[array2D[i].getLen() - j - 1] = c;
             }
         }
     }
 
+
+    public int multipleInLargestString(){
+        int sum = 0, max = 0, maxI = 0;
+
+        for (int i = 0; i < height; i ++) {
+            if (array2D[i].getLen() < max){
+                max = array2D[i].getLen();
+                maxI = i;
+            }
+        }
+        sum = array2D[maxI].countMultipleFirst();
+        return sum;
+    }
+
+
     public void arrayPrint(){
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                System.out.print(b[i][j] + " ");
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < array2D[i].getLen(); j++) {
+                System.out.print(array2D[i].getA()[j] + " ");
             }
             System.out.println();
         }

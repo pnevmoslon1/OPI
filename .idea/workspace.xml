@@ -7,8 +7,6 @@
     <list default="true" id="a77ae763-f7ec-43cd-8bfb-6c22eade9254" name="Changes" comment="джава говно!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arrayArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/array_1D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array_1D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/array_2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array_2D.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +38,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "lab3",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/123/Desktop/OPI"
   }
