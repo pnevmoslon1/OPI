@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a77ae763-f7ec-43cd-8bfb-6c22eade9254" name="Changes" comment="джава говно!!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arrayArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/array_1D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array_1D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/array_2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/array_2D.java" afterDir="false" />
-    </list>
+    <list default="true" id="a77ae763-f7ec-43cd-8bfb-6c22eade9254" name="Changes" comment="джава говно!!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +53,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713419158937</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="джава говно!!">
+      <option name="closed" value="true" />
+      <created>1714092343176</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714092343176</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
